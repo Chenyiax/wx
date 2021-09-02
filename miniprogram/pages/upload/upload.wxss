@@ -1,0 +1,16 @@
+.page {
+  font-family: SimSun;
+}
+
+.pagetitle {
+  font-weight: 800;
+}
+
+button{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.text {
+  margin-top: 10px;
+}

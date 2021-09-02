@@ -1,0 +1,45 @@
+<!-- main.wxml -->
+<view class="center" wx:if="{{test == 0}}">
+  <view class="photo" bindtap="upload">
+    <image class="image" src="../../images/release.png"></image>
+  </view>
+</view>
+<view class="center1" wx:elif="{{test == 1}}">
+  <view class="questionbox" bindtap="toquestion" wx:for="{{question}}" data-name="{{item}}" >
+    <view class="title">
+       {{item.title}}
+    </view>
+    <view class="text">
+      {{item.text}}
+    </view>
+  </view>
+</view>
+<view class="center2" wx:elif="{{test == 2}}">
+  <view class="name">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="picture">
+        <open-data type="userAvatarUrl"></open-data>       
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+  </view>
+  <view>
+    <mp-cells ext-class="my-cells" title="个人信息">
+      <mp-cell link hover value="姓名" footer="{{name}}" bindtap="modalinput"></mp-cell>
+      <mp-cell link hover value="年龄" footer="{{age}}" bindtap="modalinput"></mp-cell>     
+      <mp-cell link hover value="学院" footer="{{college}}" bindtap="modalinput"></mp-cell> 
+      <mp-cell link hover value="专业班级" footer="{{classes}}" bindtap="modalinput"></mp-cell>
+      <mp-cell link hover value="我的问题"  bindtap=""></mp-cell>
+      <mp-cell link hover value="我的回答"  bindtap=""></mp-cell>
+    </mp-cells>
+  </view>
+</view>
+<view>
+  <mp-tabbar class="bottom" list="{{list}}" bindchange="tabChange"></mp-tabbar>
+</view>
+<modal id="modal" hidden="{{hiddenmodalput}}" title="个人信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <input type='text' placeholder="姓名" bindinput="getName" auto-focus/>
+  <input type='text' placeholder="年龄" bindinput="getAge" auto-focus/>
+  <input type='text' placeholder="学院" bindinput="getCollege" auto-focus/>
+  <input type='text' placeholder="专业班级" bindinput="getClasses" auto-focus/>
+</modal>

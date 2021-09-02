@@ -1,0 +1,90 @@
+/* pages/main/main.wxss */
+
+.bottom {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  left:0;
+  right:0;
+  z-index: 10;
+}
+.center {
+  display: flex;
+  position: fixed;
+  height: 80%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.center1 {
+  background-color: #f0f0f0;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.center2 {
+  position: fixed;
+  height: 80%;
+  width: 100%;
+}
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 5px solid #00B26A;
+  height: 150px;
+  width: 150px;
+}
+.image  {
+  height: 80px;
+  width: 120px;
+}
+.items {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  border:2px ;
+  color:rgb(29,178,244);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+}
+.picture {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.questionbox {
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  margin-bottom: 1px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.title {
+  margin-left: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #00B26A;
+}
+
+.text {
+  margin-left: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}

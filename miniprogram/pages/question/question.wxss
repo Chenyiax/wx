@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+
+.title {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  font-size: large;
+  color: #00B26A;
+}
+.text {
+  background-color: white;
+  width: 100%;
+}
+image {
+  width: 100px;
+  height: 100px;
+}
+
+.picture{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1px;
+}
+.box {
+  background-color: white;
+  position: fixed;
+  bottom: 2px;
+  width: 100%;
+  height: 5%;
+  padding: 4px;
+  display: flex;
+}
+.answer {
+  border: white;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  width: 520rpx;
+  padding: 8px;
+}
+.textarea {
+  width: 520rpx;
+}
+
+.answers{
+  margin-bottom: 1px;
+  border: #F6F6F6 ;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.answername {
+  left: 10px;
+  font-weight: 800px;
+  width: auto;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+}
+
+.answertext {
+  position: fixed;
+  font-family: 'Courier New', Courier, monospace;
+  left: 25%;
+}

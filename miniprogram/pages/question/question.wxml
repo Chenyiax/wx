@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="title">{{question[0].title}}</view>
+  <view class="text">{{question[0].text}}</view>
+  <view class="picture" wx:for="{{question[0].files.tempFilePaths}}">
+    <image src="{{question[0].files.tempFilePaths[0]}}" bindtap="open"></image>
+  </view>
+  <view class="answers" wx:for="{{answer}}">
+    <view class="answername">{{item.userInfo}}</view>
+    <view class="answertext">{{item.text}}</view>
+  </view>
+</view>
+
+<view class="box">
+  <view class="answer">
+    <textarea class="textarea" placeholder="回答他的问题" auto-height="true" bindinput="getText"></textarea>
+  </view>
+  <button class="bt" type="primary" bindtap="send" size="mini">发送</button>
+</view>
+
+<mp-gallery show="{{show}}" bindchange="change" img-urls="{{question[0].files.tempFilePaths}}" hide-on-click="{{true}}" current="1" showDelete="{{false}}"></mp-gallery>
